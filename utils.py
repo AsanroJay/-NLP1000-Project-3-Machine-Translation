@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 
+
 def load_language_corpus(csv_paths):
     """
     Reads multiple CSVs for one language and concatenates them into one dataframe.
@@ -40,3 +41,4 @@ def create_parallel_corpora(lang_files, pairs, output_dir):
         out_path = os.path.join(output_dir, f"{lang1}_{lang2}_parallel.csv")
         merged.to_csv(out_path, index=False, encoding="utf-8")
         print(f"Saved: {out_path}")
+        
